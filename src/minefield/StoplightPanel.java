@@ -1,7 +1,7 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
-import java.awt.*;
+
 import javax.swing.*;
 
 

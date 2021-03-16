@@ -1,4 +1,4 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
 
@@ -14,4 +14,3 @@ public class ChangeCommand extends Command {
     }
 
 }
-//test test test
