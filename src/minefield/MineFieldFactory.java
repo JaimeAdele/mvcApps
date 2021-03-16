@@ -1,13 +1,13 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
 
-public class StoplightFactory implements AppFactory {
+public class MineFieldFactory implements AppFactory {
 
-    public Model makeModel() { return new Stoplight(); }
+    public Model makeModel() { return new MineField(); }
 
     public View makeView(Model m) {
-        return new StoplightView((Stoplight)m);
+        return new MineFieldView((MineField) m);
     }
 
     public String[] getEditCommands() { return new String[] {"Change"}; }
@@ -25,7 +25,7 @@ public class StoplightFactory implements AppFactory {
     }
 
     public String about() {
-        return "Stoplight Simulator version 1.0. Copyright 2020 by Cyberdellic Designs";
+        return "MineField version 1.0. Copyright 2021 by CS151 Team 8";
     }
 
 }

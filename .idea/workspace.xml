@@ -2,141 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b37a252-4348-4411-a1ab-7d916ee2342d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyMVCApps/MyMVCApps.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Bean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Bean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/ChangeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/ChangeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/Stoplight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/Stoplight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stoplight/ChangeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/ChangeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stoplight/Stoplight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldView.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="911178443">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="12" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mvc/Bean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mvc/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mvc/Model.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#613#614#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mvc/Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mvc/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stoplight/ChangeCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stoplight/Stoplight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stoplight/StoplightFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stoplight/StoplightPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/stoplight/StoplightView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,7 +40,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -173,12 +67,16 @@
       </list>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="244" />
     <option name="y" value="23" />
     <option name="width" value="1188" />
     <option name="height" value="877" />
   </component>
+  <component name="ProjectId" id="1pjWV5pKcqYpSrF44mmQAoplayz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -218,29 +116,26 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615683263643" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration name="StoplightPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stoplight.StoplightPanel" />
+    <configuration name="MineFieldPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="minefield.MineFieldPanel" />
       <module name="mvcApps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stoplight.*" />
+          <option name="PATTERN" value="minefield.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -250,10 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StoplightPanel" />
+        <item itemvalue="Application.MineFieldPanel" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -298,8 +194,16 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mvc/AppFactory.java">

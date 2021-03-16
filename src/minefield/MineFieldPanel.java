@@ -1,14 +1,14 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
-import java.awt.*;
+
 import javax.swing.*;
 
 
 
-public class StoplightPanel extends AppPanel {
+public class MineFieldPanel extends AppPanel {
     private JButton change;
-    public StoplightPanel(AppFactory factory) {
+    public MineFieldPanel(AppFactory factory) {
         super(factory);
 
         change = new JButton("Change");
@@ -17,8 +17,8 @@ public class StoplightPanel extends AppPanel {
     }
 
     public static void main(String[] args) {
-        AppFactory factory = new StoplightFactory();
-        AppPanel panel = new StoplightPanel(factory);
+        AppFactory factory = new MineFieldFactory();
+        AppPanel panel = new MineFieldPanel(factory);
         panel.display();
     }
 

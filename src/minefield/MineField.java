@@ -1,9 +1,9 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
 import java.awt.Color;
 
-public class Stoplight extends Model {
+public class MineField extends Model {
     private Color color = Color.GREEN;
 
     public Color getColor() {
