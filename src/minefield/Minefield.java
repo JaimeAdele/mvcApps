@@ -89,10 +89,10 @@ public class Minefield extends Model {
             currentPosition.setY(newY);
             currentPosition.wasVisited();
             if (currentPosition.getX() == FIELD_WIDTH - 1 && currentPosition.getY() == FIELD_HEIGHT - 1) {
-                Utilities.inform("You reached the goal! Congrats, you won the game!");
+                //game won
                 endGame();
             } else if (currentPosition.isMined()) {
-                Utilities.inform("You stepped on a mine. Game Over!");
+                //game lost
                 endGame();
             }
             changed();
@@ -108,7 +108,7 @@ public class Minefield extends Model {
         private int y;
         private Boolean mined;
         private Boolean visited;
-        private int surroundingMines;
+        public int surroundingMines;
 
         Square(int x, int y) {
             this.x = x;
@@ -149,5 +149,7 @@ public class Minefield extends Model {
         public void visit() {
             visited = true;
         }
+
+
     }
 }
