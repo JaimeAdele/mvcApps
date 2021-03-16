@@ -7,6 +7,7 @@ import javax.swing.*;
 
 
 public class StoplightPanel extends AppPanel {
+    // hi
     private JButton change;
     public StoplightPanel(AppFactory factory) {
         super(factory);
