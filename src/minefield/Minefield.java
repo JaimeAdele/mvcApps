@@ -73,6 +73,7 @@ public class Minefield extends Model {
         return field.get(x).get(y).visited;
     }
 
+    //returns number of mines surrounding square at x, y
     public int getSurroundingMines(int x, int y) {
         return field.get(x).get(y).surroundingMines;
     }
