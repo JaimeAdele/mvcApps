@@ -1,4 +1,4 @@
-package stoplight;
+package minefield;
 
 import mvc.*;
 
