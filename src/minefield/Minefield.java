@@ -77,66 +77,66 @@ public class Minefield extends Model {
         return field.get(x).get(y).surroundingMines;
     }
 
-    public void moveN() {
+    public void moveN() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX(), currentPosition.getY() - 1);
         }
     }
-    public void moveS() {
+    public void moveS() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX(), currentPosition.getY() + 1);
         }
     }
-    public void moveE() {
+    public void moveE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() + 1, currentPosition.getY());
         }
     }
-    public void moveW() {
+    public void moveW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() - 1, currentPosition.getY());
         }
     }
-    public void moveNE() {
+    public void moveNE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() + 1, currentPosition.getY() - 1);
         }
     }
-    public void moveNW() {
+    public void moveNW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() - 1, currentPosition.getY() - 1);
         }
     }
-    public void moveSE() {
+    public void moveSE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() + 1, currentPosition.getY() + 1);
         }
     }
-    public void moveSW() {
+    public void moveSW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
-            Utilities.inform("The game has ended. Please start a new game.");
+            throw new GameOverException("The game has ended. Please start a new game.");
         } else {
             changePosition(currentPosition.getX() - 1, currentPosition.getY() + 1);
         }
     }
 
-    public void changePosition(int newX, int newY) {
+    public void changePosition(int newX, int newY) throws IllegalMoveException {
         if (newX < 0 || newX >= FIELD_WIDTH || newY < 0 || newY >= FIELD_HEIGHT) {
-            Utilities.inform("You cannot move in that direction. Please choose a different direction.");
+            throw new IllegalMoveException("You cannot move in that direction. Please choose a different direction.");
         } else {
             currentPosition.setX(newX);
             currentPosition.setY(newY);
@@ -153,11 +153,11 @@ public class Minefield extends Model {
     }
 
     private class Square {
-        private int x;
-        private int y;
-        private Boolean mined;
-        private Boolean visited;
-        public int surroundingMines;
+        int x;
+        int y;
+        Boolean mined;
+        Boolean visited;
+        int surroundingMines;
 
         Square(int x, int y) {
             this.x = x;
@@ -167,27 +167,27 @@ public class Minefield extends Model {
             surroundingMines = 0;
         }
 
-        public int getX() {
+        int getX() {
             return x;
         }
 
-        public int getY() {
+        int getY() {
             return y;
         }
 
-        public void setX(int x) {
+        void setX(int x) {
             this.x = x;
         }
 
-        public void setY(int y) {
+        void setY(int y) {
             this.y = y;
         }
 
-        public void addMine() {
+        void addMine() {
             mined = true;
         }
 
-        public void visit() {
+        void visit() {
             visited = true;
         }
 
