@@ -12,6 +12,7 @@ public class Minefield extends Model {
 
     private ArrayList<ArrayList<Square>> field;
     private Square currentPosition;
+    private Square goal;
     private Boolean gameOver = false;
 
     public Minefield() { //initialize a new Minefield model
@@ -28,13 +29,16 @@ public class Minefield extends Model {
             field.add(newColumn);
         }
 
+        //set goal square
+
+
         //add mines to specified percentage of squares
         int x, y;
         int numOfMines = FIELD_HEIGHT * FIELD_WIDTH * percentMined / 100;
         for (int k = 0; k < numOfMines; k++) {
             x = (int)(Math.random() * FIELD_WIDTH);
             y = (int)(Math.random() * FIELD_HEIGHT);
-            if (field.get(x).get(y).isMined() || (x == 0 && y == 0)) {
+            if (hasMine(x, y) || (x == 0 && y == 0) || (x == FIELD_WIDTH && y == FIELD_HEIGHT)) {
                 k--;
             } else {
                 field.get(x).get(y).addMine();
@@ -58,8 +62,19 @@ public class Minefield extends Model {
         currentPosition.visit();
     }
 
+    //hopefully, this function is unnecessary
     public ArrayList<ArrayList<Square>> getField() {
         return field;
+    }
+
+    //returns whether square at x, y has a mine
+    public Boolean hasMine(int x, int y) {
+        return field.get(x).get(y).mined;
+    }
+
+    //returns whether square at x, y has been visited
+    public Boolean wasVisited(int x, int y) {
+        return field.get(x).get(y).visited;
     }
 
     public void moveN() {
@@ -125,11 +140,11 @@ public class Minefield extends Model {
         } else {
             currentPosition.setX(newX);
             currentPosition.setY(newY);
-            currentPosition.wasVisited();
+            currentPosition.visit();
             if (currentPosition.getX() == FIELD_WIDTH - 1 && currentPosition.getY() == FIELD_HEIGHT - 1) {
                 //game won
                 gameOver = true;
-            } else if (currentPosition.isMined()) {
+            } else if (currentPosition.mined) {
                 //game lost
                 gameOver = true;
             }
@@ -168,21 +183,21 @@ public class Minefield extends Model {
             this.y = y;
         }
 
-        public Boolean isMined() {
-            return mined;
-        }
-
         public void addMine() {
             mined = true;
-        }
-
-        public Boolean wasVisited() {
-            return visited;
         }
 
         public void visit() {
             visited = true;
         }
+
+//        public Boolean isMined() {
+//            return mined;
+//        }
+
+//        public Boolean wasVisited() {
+//            return visited;
+//        }
 
 
     }
