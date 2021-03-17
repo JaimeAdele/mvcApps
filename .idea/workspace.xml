@@ -175,9 +175,6 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mvc/AppFactory.java">
       <provider selected="true" editor-type-id="text-editor">
