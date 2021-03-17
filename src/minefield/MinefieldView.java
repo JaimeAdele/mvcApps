@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.beans.PropertyChangeListener;
 
-public class MineFieldView extends View {
+public class MinefieldView extends View {
     private MineField model;
     private int width, height, rows, columns;
     public static final int SIZE = 10;
