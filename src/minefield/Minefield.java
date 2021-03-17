@@ -10,13 +10,15 @@ public class Minefield extends Model {
     public static int FIELD_HEIGHT = 50;
     public static int percentMined = 5;
 
-    private ArrayList<ArrayList<Square>> field = new ArrayList<>();
+    private ArrayList<ArrayList<Square>> field;
     private Square currentPosition;
+    private Boolean gameOver = false;
 
     public Minefield() { //initialize a new Minefield model
 
         //create field of squares as two-dimensional array
-        //representation as column x row, so a 50x100 field is 50 wide and 100 tall ????????????????????
+        //representation as column x row, so a 50x100 field is 50 wide and 100 tall
+        field = new ArrayList<>();
         for (int i = 0; i < FIELD_WIDTH; i++) {
             ArrayList<Square> newColumn = new ArrayList<>();
             for (int j = 0; j < FIELD_HEIGHT; j++) {
@@ -56,29 +58,65 @@ public class Minefield extends Model {
         currentPosition.visit();
     }
 
+    public ArrayList<ArrayList<Square>> getField() {
+        return field;
+    }
+
     public void moveN() {
-        changePosition(currentPosition.getX(), currentPosition.getY() - 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX(), currentPosition.getY() - 1);
+        }
     }
     public void moveS() {
-        changePosition(currentPosition.getX(), currentPosition.getY() + 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX(), currentPosition.getY() + 1);
+        }
     }
     public void moveE() {
-        changePosition(currentPosition.getX() + 1, currentPosition.getY());
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() + 1, currentPosition.getY());
+        }
     }
     public void moveW() {
-        changePosition(currentPosition.getX() - 1, currentPosition.getY());
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() - 1, currentPosition.getY());
+        }
     }
     public void moveNE() {
-        changePosition(currentPosition.getX() + 1, currentPosition.getY() - 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() + 1, currentPosition.getY() - 1);
+        }
     }
     public void moveNW() {
-        changePosition(currentPosition.getX() - 1, currentPosition.getY() - 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() - 1, currentPosition.getY() - 1);
+        }
     }
     public void moveSE() {
-        changePosition(currentPosition.getX() + 1, currentPosition.getY() + 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() + 1, currentPosition.getY() + 1);
+        }
     }
     public void moveSW() {
-        changePosition(currentPosition.getX() - 1, currentPosition.getY() + 1);
+        if (gameOver) {
+            Utilities.inform("The game has ended. Please start a new game.");
+        } else {
+            changePosition(currentPosition.getX() - 1, currentPosition.getY() + 1);
+        }
     }
 
     public void changePosition(int newX, int newY) {
@@ -90,17 +128,13 @@ public class Minefield extends Model {
             currentPosition.wasVisited();
             if (currentPosition.getX() == FIELD_WIDTH - 1 && currentPosition.getY() == FIELD_HEIGHT - 1) {
                 //game won
-                endGame();
+                gameOver = true;
             } else if (currentPosition.isMined()) {
                 //game lost
-                endGame();
+                gameOver = true;
             }
             changed();
         }
-    }
-
-    public void endGame() {
-        //--------------------------------------How do we end the game when won or lost??????????????????????
     }
 
     private class Square {
