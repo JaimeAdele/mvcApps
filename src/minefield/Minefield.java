@@ -12,7 +12,6 @@ public class Minefield extends Model {
 
     private ArrayList<ArrayList<Square>> field;
     private Square currentPosition;
-    private Square goal;
     private Boolean gameOver = false;
 
     public Minefield() { //initialize a new Minefield model
@@ -28,9 +27,6 @@ public class Minefield extends Model {
             }
             field.add(newColumn);
         }
-
-        //set goal square
-
 
         //add mines to specified percentage of squares
         int x, y;
@@ -75,6 +71,10 @@ public class Minefield extends Model {
     //returns whether square at x, y has been visited
     public Boolean wasVisited(int x, int y) {
         return field.get(x).get(y).visited;
+    }
+
+    public int getSurroundingMines(int x, int y) {
+        return field.get(x).get(y).surroundingMines;
     }
 
     public void moveN() {
