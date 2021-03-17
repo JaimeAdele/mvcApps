@@ -6,15 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.beans.PropertyChangeListener;
 
-class Cell
-{
-    JLabel label = new JLabel("?");
-}
 public class MineFieldView extends View {
     private MineField model;
     private int width, height, rows, columns;
     public static final int SIZE = 10;
-    private boolean i<model.FIELD_WIDTH; i++;
 
     public MineFieldView(MineField theModel)
     {
@@ -24,29 +19,10 @@ public class MineFieldView extends View {
     public void paintComponent(Graphics gc) {
         super.paintComponent(gc);
         MineField model1 = (MineField)model;
-      /*  Color oldColor = gc.getColor();
-        gc.setColor(model1.getColor());
-        gc.fillOval(100, 100, 20, 20);  */
 
-        //new
+        //new background
         gc.setColor(Color.DARK_GRAY);
         gc.fillRect(125,0, 125, 250);
-
-        //drawing the rows
-        int rowPoints = height/rows;
-        for(int i = 0; i<rows; i++)
-        {
-            gc.setColor(Color.WHITE);
-            gc.drawLine(0, i*rowPoints,  width, i*rowPoints);
-            Cell cell = new Cell();
-        }
-        //drawing the columns
-        int columnPoints = width/columns;
-        for(int i = 0; i<columns; i++)
-        {
-            gc.setColor(Color.WHITE);
-            gc.drawLine(i*rowPoints,  0, i*rowPoints, height);
-        }
 
         //drawing squares
 
@@ -54,12 +30,18 @@ public class MineFieldView extends View {
         {
             for(int j=0; j<model.FIELD_HEIGHT; j++)
             {
-                if(field.getX().getY().wasVisited())
+                if(model.Square.wasVisited())
                 {
                     gc.setColor(Color.BLACK);
-                    String mines = String.valueOf(field.getX().getY().surroundingMines);
+                    String mines = String.valueOf(model.Square.surroundingMines);
                     JLabel label = new JLabel(mines);
                     gc.setColor(Color.WHITE);
+                }
+                else if(model.Square.getX()==model.FIELD_WIDTH && model.Square.getY()==model.FIELD_HEIGHT)
+                {
+                    gc.setColor(Color.BLACK);
+                    JLabel label = new JLabel("?");
+                    gc.setColor(Color.GREEN);
                 }
                 else
                 {
@@ -67,10 +49,24 @@ public class MineFieldView extends View {
                     JLabel label = new JLabel("?");
                     gc.setColor(Color.DARK_GRAY);
                 }
-                gc.drawRect(x,y,SIZE,SIZE);
+                gc.drawRect(model.getX(),model.getY(),SIZE,SIZE);
             }
         }
 
 
     }
+}
+
+class Cell extends JPanel
+{
+    int x = 0;
+    int y = 0;
+   // String label = "?";
+    Cell(int x, int y, String label)
+    {
+        this.x = x;
+        this.y = y;
+        JLabel cellLabel = new JLabel(label);
+    }
+
 }

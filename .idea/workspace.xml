@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b37a252-4348-4411-a1ab-7d916ee2342d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="2b37a252-4348-4411-a1ab-7d916ee2342d" name="Default Changelist" comment="//defined how to paint squares">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/AppPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Bean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Bean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/Utilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/mvc/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/mvc/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/ChangeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/ChangeCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/Stoplight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/Stoplight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mvcApps/stoplight/StoplightView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stoplight/ChangeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/ChangeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stoplight/Stoplight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stoplight/StoplightView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/minefield/MineFieldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineFieldView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +142,14 @@
       <option name="presentableId" value="Default" />
       <updated>1615683012554</updated>
     </task>
+    <task id="LOCAL-00001" summary="//defined how to paint squares">
+      <created>1615867249164</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615867249164</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -204,6 +193,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="//defined how to paint squares" />
+    <option name="LAST_COMMIT_MESSAGE" value="//defined how to paint squares" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mvc/AppFactory.java">
