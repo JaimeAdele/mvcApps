@@ -18,7 +18,7 @@ public class MinefieldView extends View {
 
     public void paintComponent(Graphics gc) {
         super.paintComponent(gc);
-        Minefield model1 = (Minefield)model;//each reference to model in this function should be minefield--it's the one that has a type of Minefield, whereas model is only known to be a generic Model  -JZ
+        Minefield model1 = (Minefield)model;//each reference to model in this function should be model1 (maybe a more specific name? there aren't multiple models)--it's the one that has a type of Minefield, whereas model is only known to be a generic Model  -JZ
 
         //new background
         gc.setColor(Color.DARK_GRAY);
