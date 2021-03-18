@@ -71,6 +71,10 @@ public class Minefield extends Model {
         return field.get(x).get(y).mined;
     }
 
+    public Boolean isGoal(int x, int y) {
+        return field.get(x).get(y).goal;
+    }
+
     //returns whether square at x, y has been visited
     public Boolean wasVisited(int x, int y) {
         return field.get(x).get(y).visited;
