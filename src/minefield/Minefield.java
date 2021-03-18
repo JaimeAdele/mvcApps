@@ -28,23 +28,30 @@ public class Minefield extends Model {
             field.add(newColumn);
         }
 
+        //add player to initial location
+        currentPosition = field.get(0).get(0);
+        currentPosition.visited = true;
+
+        //add goal
+        field.get(FIELD_WIDTH - 1).get(FIELD_HEIGHT - 1).goal = true;
+
         //add mines to specified percentage of squares
         int x, y;
         int numOfMines = FIELD_HEIGHT * FIELD_WIDTH * percentMined / 100;
         for (int k = 0; k < numOfMines; k++) {
             x = (int)(Math.random() * FIELD_WIDTH);
             y = (int)(Math.random() * FIELD_HEIGHT);
-            if (hasMine(x, y) || (x == 0 && y == 0) || (x == FIELD_WIDTH && y == FIELD_HEIGHT)) {
+            if (hasMine(x, y) || field.get(x).get(y) == currentPosition || field.get(x).get(y).goal) {
                 k--;
             } else {
-                field.get(x).get(y).addMine();
+                field.get(x).get(y).mined = true;
                 //increment number of surroundingMines for neighboring squares
                 for (int i = x - 1; i <= x + 1; i++) {
                     for (int j = y - 1; j <= y + 1; j++) {
                         if (i != x && j != y) {
                             try {
                                 field.get(i).get(j).surroundingMines++;
-                            } catch (NullPointerException e) {
+                            } catch (IndexOutOfBoundsException e) {
                                 //do nothing if the square doesn't exist
                             }
                         }
@@ -52,10 +59,6 @@ public class Minefield extends Model {
                 }
             }
         }
-
-        //add player to initial location
-        currentPosition = field.get(0).get(0);
-        currentPosition.visit();
     }
 
     //hopefully, this function is unnecessary
@@ -82,56 +85,56 @@ public class Minefield extends Model {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX(), currentPosition.getY() - 1);
+            changePosition(currentPosition.x, currentPosition.y - 1);
         }
     }
     public void moveS() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX(), currentPosition.getY() + 1);
+            changePosition(currentPosition.x, currentPosition.y + 1);
         }
     }
     public void moveE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() + 1, currentPosition.getY());
+            changePosition(currentPosition.x + 1, currentPosition.y);
         }
     }
     public void moveW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() - 1, currentPosition.getY());
+            changePosition(currentPosition.x - 1, currentPosition.y);
         }
     }
     public void moveNE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() + 1, currentPosition.getY() - 1);
+            changePosition(currentPosition.x + 1, currentPosition.y - 1);
         }
     }
     public void moveNW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() - 1, currentPosition.getY() - 1);
+            changePosition(currentPosition.x - 1, currentPosition.y - 1);
         }
     }
     public void moveSE() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() + 1, currentPosition.getY() + 1);
+            changePosition(currentPosition.x + 1, currentPosition.y + 1);
         }
     }
     public void moveSW() throws IllegalMoveException, GameOverException {
         if (gameOver) {
             throw new GameOverException("The game has ended. Please start a new game.");
         } else {
-            changePosition(currentPosition.getX() - 1, currentPosition.getY() + 1);
+            changePosition(currentPosition.x - 1, currentPosition.y + 1);
         }
     }
 
@@ -139,10 +142,10 @@ public class Minefield extends Model {
         if (newX < 0 || newX >= FIELD_WIDTH || newY < 0 || newY >= FIELD_HEIGHT) {
             throw new IllegalMoveException("You cannot move in that direction. Please choose a different direction.");
         } else {
-            currentPosition.setX(newX);
-            currentPosition.setY(newY);
-            currentPosition.visit();
-            if (currentPosition.getX() == FIELD_WIDTH - 1 && currentPosition.getY() == FIELD_HEIGHT - 1) {
+            currentPosition.x = newX;
+            currentPosition.y = newY;
+            currentPosition.visited = true;
+            if (currentPosition.x == FIELD_WIDTH - 1 && currentPosition.y == FIELD_HEIGHT - 1) {
                 //game won
                 gameOver = true;
             } else if (currentPosition.mined) {
@@ -158,6 +161,7 @@ public class Minefield extends Model {
         int y;
         Boolean mined;
         Boolean visited;
+        Boolean goal;
         int surroundingMines;
 
         Square(int x, int y) {
@@ -166,31 +170,32 @@ public class Minefield extends Model {
             mined = false;
             visited = false;
             surroundingMines = 0;
+            goal = false;
         }
 
-        int getX() {
-            return x;
-        }
-
-        int getY() {
-            return y;
-        }
-
-        void setX(int x) {
-            this.x = x;
-        }
-
-        void setY(int y) {
-            this.y = y;
-        }
-
-        void addMine() {
-            mined = true;
-        }
-
-        void visit() {
-            visited = true;
-        }
+//        int getX() {
+//            return x;
+//        }
+//
+//        int getY() {
+//            return y;
+//        }
+//
+//        void setX(int x) {
+//            this.x = x;
+//        }
+//
+//        void setY(int y) {
+//            this.y = y;
+//        }
+//
+//        void addMine() {
+//            mined = true;
+//        }
+//
+//        void visit() {
+//            visited = true;
+//        }
 
 //        public Boolean isMined() {
 //            return mined;
