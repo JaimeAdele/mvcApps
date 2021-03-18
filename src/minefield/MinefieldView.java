@@ -3,69 +3,63 @@ package minefield;
 import mvc.*;
 
 import javax.swing.*;
+import javax.swing.border.*;
 import java.awt.*;
+import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 public class MinefieldView extends View {
-    private Minefield model;
-    private int width, height, rows, columns;
-    public static final int SIZE = 10;
 
+    public static final int SIZE = 10;
+    Minefield model1 = (Minefield)model;
     public MinefieldView(Minefield theModel)
     {
         super(theModel);
+        setLayout(new GridLayout(model1.FIELD_WIDTH, model1.FIELD_HEIGHT));
     }
 
-    public void paintComponent(Graphics gc) {
-        super.paintComponent(gc);
-        Minefield model1 = (Minefield)model;
-        //new background
-        gc.setColor(Color.DARK_GRAY);
-        gc.fillRect(125,0, 125, 250);
+    //public void paintComponent(Graphics gc) {
+     //   super.paintComponent(gc);
 
+    public void propertyChange(PropertyChangeEvent event)
+    {
+        Minefield model1 = (Minefield)model;
+        JLabel label = new JLabel("?");
+      //  label.setPreferredSize(new Dimension(SIZE, SIZE));
+        Border greenLine =  BorderFactory.createLineBorder(Color.GREEN);
+        Border blackLine =  BorderFactory.createLineBorder(Color.BLACK);
+        Border whiteLine =  BorderFactory.createLineBorder(Color.WHITE);
         //drawing squares
 
-        for(int i = 0; i<model.FIELD_WIDTH; i++)
+        for(int i = 0; i<model1.FIELD_WIDTH; i++)
         {
-            for(int j=0; j<model.FIELD_HEIGHT; j++)
+            for(int j=0; j<model1.FIELD_HEIGHT; j++)
             {
-                if(model.Square.wasVisited())
+                if(model1.wasVisited(i,j))
                 {
-                    gc.setColor(Color.BLACK);
-                    String mines = String.valueOf(model.Square.surroundingMines);
-                    JLabel label = new JLabel(mines);
-                    gc.setColor(Color.WHITE);
+                    setBackground(Color.gray);
+                    setBorder(whiteLine);
+                    String mines = String.valueOf(model1.getSurroundingMines(i,j));
+                    label = new JLabel(mines);
+                    this.add(label);
                 }
-                else if(model.Square.getX()==model.FIELD_WIDTH && model.Square.getY()==model.FIELD_HEIGHT)
+                else if(model1.isGoal(i,j))
                 {
-                    gc.setColor(Color.BLACK);
-                    JLabel label = new JLabel("?");
-                    gc.setColor(Color.GREEN);
+                    setBackground(Color.DARK_GRAY);
+                    setBorder(greenLine);
+                    label = new JLabel("X");
+                    this.add(label);
                 }
                 else
                 {
-                    gc.setColor(Color.BLACK);
-                    JLabel label = new JLabel("?");
-                    gc.setColor(Color.DARK_GRAY);
+                    setBackground(Color.DARK_GRAY);
+                    setBorder(blackLine);
                 }
-                gc.drawRect(model.getX(),model.getY(),SIZE,SIZE);
             }
         }
 
-
     }
 }
 
-class Cell extends JPanel
-{
-    int x = 0;
-    int y = 0;
-   // String label = "?";
-    Cell(int x, int y, String label)
-    {
-        this.x = x;
-        this.y = y;
-        JLabel cellLabel = new JLabel(label);
-    }
 
-}
+
