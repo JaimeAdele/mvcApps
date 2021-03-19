@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="012ea567-26a2-419f-8bf4-7fdc6529478b" name="Default Changelist" comment="//added command classes">
       <change beforePath="$PROJECT_DIR$/src/minefield/MineField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MineField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minefield/MinefieldPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MinefieldPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minefield/MinefieldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minefield/MinefieldView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
