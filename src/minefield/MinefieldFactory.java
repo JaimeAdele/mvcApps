@@ -5,11 +5,11 @@ import mvc.Model;
 import mvc.View;
 import mvc.*;
 
-public class MineFieldFactory implements AppFactory{
+public class MinefieldFactory implements AppFactory{
     public Model makeModel() { return new Minefield(); }
 
     public View makeView(Model m) {
-        return new MineFieldView((Minefield)m);
+        return new MinefieldView((Minefield)m);
     }
 
     public String[] getEditCommands() { return new String[] {"North", "Northwest", "Northeast", "West", "East", "South", "Southwest", "Southeast"}; }
