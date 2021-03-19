@@ -24,6 +24,7 @@ public class MinefieldView extends View {
 
     public void propertyChange(PropertyChangeEvent event) {
         Minefield model1 = (Minefield)model;
+        JPanel panel;
         JLabel label;
         setBackground(Color.DARK_GRAY);
         //label.setPreferredSize(new Dimension(SIZE, SIZE));
@@ -34,8 +35,9 @@ public class MinefieldView extends View {
 
         for(int j = 0; j < model1.FIELD_WIDTH; j++) {
             for(int i = 0; i < model1.FIELD_HEIGHT; i++) {
+                panel = new JPanel();
                 if(model1.wasVisited(i,j)) {
-                    setBackground();
+                    setBackground(Color.LIGHT_GRAY);
                     setBorder(whiteLine);
                     String mines = String.valueOf(model1.getSurroundingMines(i,j));
                     label = new JLabel(mines);
@@ -46,7 +48,7 @@ public class MinefieldView extends View {
                     setBorder(blackLine);
                     label = new JLabel("?");
                 }
-                add(label);
+                panel.add(label);
             }
         }
 
