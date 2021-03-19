@@ -208,7 +208,5 @@ public class Minefield extends Model {
 //        public Boolean wasVisited() {
 //            return visited;
 //        }
-
-
     }
 }
