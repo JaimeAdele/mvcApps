@@ -37,15 +37,15 @@ public class MinefieldView extends View {
             for(int i = 0; i < model1.FIELD_HEIGHT; i++) {
                 panel = new JPanel();
                 if(model1.wasVisited(i,j)) {
-                    setBackground(Color.LIGHT_GRAY);
-                    setBorder(whiteLine);
+                    panel.setBackground(Color.LIGHT_GRAY);
+                    panel.setBorder(whiteLine);
                     String mines = String.valueOf(model1.getSurroundingMines(i,j));
                     label = new JLabel(mines);
                 } else if(model1.isGoal(i,j)) {
-                    setBorder(greenLine);
+                    panel.setBorder(greenLine);
                     label = new JLabel("X");
                 } else {
-                    setBorder(blackLine);
+                    panel.setBorder(blackLine);
                     label = new JLabel("?");
                 }
                 panel.add(label);
