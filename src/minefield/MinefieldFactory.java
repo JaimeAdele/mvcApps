@@ -12,24 +12,25 @@ public class MinefieldFactory implements AppFactory{
         return new MinefieldView((Minefield)m);
     }
 
-    public String[] getEditCommands() { return new String[] {"North", "Northwest", "Northeast", "West", "East", "South", "Southwest", "Southeast"}; }
+    public String[] getEditCommands() { return new String[] {"N", "NW", "NE", "W", "E", "S",
+            "SW", "SE"}; }
 
     public Command makeEditCommand(Model model, String type) {
-        if (type == "North")
+        if (type == "N")
             return new NorthCommand(model);
-        if (type == "Northwest")
+        if (type == "NW")
             return new NorthWestCommand(model);
-        if (type == "Northeast")
+        if (type == "NE")
             return new NorthEastCommand(model);
-        if (type == "West")
+        if (type == "W")
             return new WestCommand(model);
-        if (type == "East")
+        if (type == "E")
             return new EastCommand(model);
-        if (type == "South")
+        if (type == "S")
             return new SouthCommand(model);
-        if (type == "Southwest")
+        if (type == "SW")
             return new SouthWestCommand(model);
-        if (type == "Southeast")
+        if (type == "SE")
             return new SouthEastCommand(model);
         return null;
     }
